@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookings – FESTORA</title>
+  <meta name="description" content="View and manage your upcoming festival passes and concert registrations on FESTORA.">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. Navigation Bar (Ref 1, 6, 7, 8)
+       ========================================================================== -->
+  <header class="site-header is-scrolled" role="banner">
+    <div class="container nav-wrap">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="FESTORA Home">
+        <span class="logo-bars" aria-hidden="true">
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+        </span>
+        <span>FESTORA<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link">Explore Events</a>
+        <a href="artists.html" class="nav-link">Artists</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="bookings.html" class="nav-link active">My Bookings</a>
+      </nav>
+
+      <!-- Nav Utility Actions -->
+      <div class="nav-actions">
+        <button type="button" class="btn-theme-toggle" aria-label="Switch Theme" title="Toggle Dark/Light Mode">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="events.html" class="btn btn-primary btn-pill btn-sm">
+          <span>FIND EVENTS</span>
+        </a>
+
+        <button type="button" class="btn-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span><span>ΓåÆ</span></a>
+      <a href="events.html" class="mobile-nav-link"><span>Explore Events</span><span>ΓåÆ</span></a>
+      <a href="artists.html" class="mobile-nav-link"><span>Artists</span><span>ΓåÆ</span></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span><span>ΓåÆ</span></a>
+      <a href="bookings.html" class="mobile-nav-link active"><span>My Bookings</span><span>ΓåÆ</span></a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Page Header (Ref 1 & 7) -->
+    <section class="page-header" aria-label="User Bookings Header">
+      <div class="page-header-bg" aria-hidden="true"></div>
+      <div class="container page-header-content">
+        <span class="page-header-tag">ΓùÅ ATTENDEE DASHBOARD</span>
+        <h1 class="page-header-title">MY EXPERIENCES</h1>
+        <p class="page-header-desc">
+          All your upcoming music experiences, in one place. Manage festival passes, print entry summaries, or adjust reservations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bookings List Section -->
+    <section class="section" style="padding-top: 3.5rem;" aria-label="Bookings List">
+      <div class="container">
+        
+        <!-- Populated by js/bookings.js -->
+        <div class="bookings-list" id="bookings-mount"></div>
+
+        <!-- Empty State (Shown when no bookings exist) -->
+        <div class="empty-state" id="bookings-empty-state" style="display: none; max-width: 680px; margin: 2rem auto;">
+          <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+            <path d="M13 5v2"></path>
+            <path d="M13 17v2"></path>
+            <path d="M13 11v2"></path>
+          </svg>
+          <h3 class="empty-state-title">NO ACTIVE PASSES FOUND</h3>
+          <p class="empty-state-desc">
+            You haven't reserved any festival passes or concert tickets yet. Explore upcoming world tours and lock in your spot.
+          </p>
+          <a href="events.html" class="btn btn-primary btn-pill">
+            <span>EXPLORE UPCOMING EVENTS Γåù</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cancellation Confirmation Modal Dialog -->
+  <div class="cancel-modal-backdrop" id="cancel-modal" aria-hidden="true">
+    <div class="cancel-modal-box" role="dialog" aria-modal="true" aria-labelledby="cancel-title">
+      <div class="cancel-modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+      <h3 id="cancel-title" style="font-size: 1.4rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; color: #fff;">
+        CANCEL RESERVATION?
+      </h3>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.75rem;">
+        Are you sure you want to cancel your pass for <strong id="cancel-event-name" style="color: #fff;">this event</strong>? Your spot will be released to the waitlist immediately.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center;">
+        <button type="button" class="btn btn-secondary btn-pill" id="btn-abort-cancel">
+          <span>KEEP PASS</span>
+        </button>
+        <button type="button" class="btn btn-primary btn-pill" id="btn-execute-cancel" style="background-color: var(--accent-red); border-color: var(--accent-red);">
+          <span>CONFIRM CANCELLATION</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-main">
+      <div>
+        <a href="index.html" class="brand-logo">
+          <span class="logo-bars"><span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span></span>
+          <span>FESTORA<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-brand-desc">Feel the Music. Live the Moment. Demo event discovery and reservation preview.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="events.html" class="footer-link">Explore Events</a></li>
+          <li><a href="artists.html" class="footer-link">Artists</a></li>
+          <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link">About FESTORA</a></li>
+          <li><a href="about.html#contact" class="footer-link">Support & Inquiries</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div><span>© 2026 FESTORA.</span></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/events.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/bookings.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

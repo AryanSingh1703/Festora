@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details – FESTORA</title>
+  <meta name="description" content="Demo event listing with artist lineup, stage timetable, venue information, and reservation preview.">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. Navigation Bar (Ref 1, 6, 7, 8)
+       ========================================================================== -->
+  <header class="site-header is-scrolled" role="banner">
+    <div class="container nav-wrap">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="FESTORA Home">
+        <span class="logo-bars" aria-hidden="true">
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+        </span>
+        <span>FESTORA<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link is-active" aria-current="page">Explore Events</a>
+        <a href="artists.html" class="nav-link">Artists</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="bookings.html" class="nav-link">My Bookings</a>
+      </nav>
+
+      <!-- Nav Utility Actions -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button type="button" class="btn-theme-toggle" aria-label="Switch Theme" title="Toggle Dark/Light Mode">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Primary CTA Button -->
+        <a href="#tickets" class="btn btn-primary btn-pill btn-sm">
+          <span>BOOK PASSES</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span><span>→</span></a>
+      <a href="events.html" class="mobile-nav-link"><span>Explore Events</span><span>→</span></a>
+      <a href="artists.html" class="mobile-nav-link"><span>Artists</span><span>→</span></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span><span>→</span></a>
+      <a href="bookings.html" class="mobile-nav-link"><span>My Bookings</span><span>→</span></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="events.html" class="btn btn-primary btn-pill btn-block"><span>EXPLORE EVENTS ↗</span></a>
+      <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">FESTORA © 2026</p>
+    </div>
+  </aside>
+
+  <!-- Main Event Details Mount -->
+  <main id="main-content">
+    
+    <!-- Dynamic Cinematic Hero Mount (Ref 2, 7) -->
+    <div id="event-hero-mount"></div>
+
+    <!-- Main Content & Sticky Booking Grid -->
+    <div class="section" style="padding-top: 3.5rem;">
+      <div class="container event-detail-grid">
+        
+        <!-- Left Main Content Column -->
+        <div class="event-main-col" id="event-main-mount">
+          <!-- Populated by js/event-details.js -->
+        </div>
+
+        <!-- Right Sticky Booking Panel (Ref 6 & 7) -->
+        <aside class="sticky-booking-panel" id="tickets" aria-label="Ticket Reservation Panel">
+          <div id="sticky-booking-mount">
+            <!-- Populated by js/event-details.js -->
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-main">
+      <div>
+        <a href="index.html" class="brand-logo">
+          <span class="logo-bars"><span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span></span>
+          <span>FESTORA<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-brand-desc">Feel the Music. Live the Moment. Festival discovery and demo reservation preview platform.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="events.html" class="footer-link">Explore Events</a></li>
+          <li><a href="artists.html" class="footer-link">Artists</a></li>
+          <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">GENRES</h4>
+        <ul class="footer-links">
+          <li><a href="events.html?genre=EDM" class="footer-link">EDM & Techno</a></li>
+          <li><a href="events.html?genre=Rock" class="footer-link">Rock & Alternative</a></li>
+          <li><a href="events.html?genre=Hip-Hop" class="footer-link">Hip-Hop</a></li>
+          <li><a href="events.html?genre=Indie" class="footer-link">Indie & Pop</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link">About FESTORA</a></li>
+          <li><a href="about.html#faq" class="footer-link">Ticketing FAQ</a></li>
+          <li><a href="about.html#contact" class="footer-link">Festival Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div><span>© 2026 FESTORA.</span></div>
+      <div class="footer-legal-links">
+        <a href="about.html#terms">Terms</a>
+        <a href="about.html#privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/events.js"></script>
+  <script src="js/event-details.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

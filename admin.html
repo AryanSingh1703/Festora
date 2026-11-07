@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#090909">
+  <title>Newsletter Command Center | FESTORA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <header class="admin-topbar">
+      <a class="brand-logo admin-brand" href="index.html" aria-label="FESTORA home">
+        <span class="logo-bars" aria-hidden="true"><span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span></span>
+        <span>FESTORA<span class="accent-dot">.</span></span>
+      </a>
+      <div class="admin-topbar-right">
+        <span class="admin-live-dot"></span><span class="admin-topbar-label">PRIVATE CONTROL ROOM</span>
+        <button id="sign-out-button" class="admin-quiet-button" type="button" hidden>Sign out ↗</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section id="setup-notice" class="admin-notice" hidden>
+        <span class="section-tag">SETUP REQUIRED</span>
+        <h1>Connect your Supabase project</h1>
+        <p>Add the project URL and anon key to <code>js/supabase-config.js</code>, then run <code>supabase/schema.sql</code> in the Supabase SQL Editor.</p>
+      </section>
+
+      <section id="login-view" class="admin-login-wrap" hidden>
+        <div class="admin-login-art">
+          <span class="section-tag">FESTORA / ADMIN ACCESS</span>
+          <h1>THE CROWD.<br><span class="admin-accent">IN YOUR HANDS.</span></h1>
+          <p>Your private view of the people waiting for the next big announcement.</p>
+          <div class="admin-login-orbit"><span>F</span><i></i><i></i><i></i></div>
+          <div class="admin-login-foot">FEEL THE MUSIC. LIVE THE MOMENT.</div>
+        </div>
+        <form id="login-form" class="admin-login-card">
+          <span class="section-tag">SECURE SIGN IN</span>
+          <h2>WELCOME BACK</h2>
+          <p>Sign in with the admin account created in Supabase.</p>
+          <label for="admin-email">Email address</label>
+          <input id="admin-email" type="email" autocomplete="username" placeholder="you@example.com" required>
+          <label for="admin-password">Password</label>
+          <input id="admin-password" type="password" autocomplete="current-password" placeholder="Your password" required>
+          <button class="btn btn-primary btn-pill admin-submit" type="submit">ENTER COMMAND CENTER ↗</button>
+          <p id="login-message" class="admin-message" role="status" aria-live="polite"></p>
+          <a class="admin-back-link" href="index.html">← Back to FESTORA</a>
+        </form>
+      </section>
+
+      <section id="dashboard-view" hidden>
+        <div class="admin-heading-row">
+          <div>
+            <span class="section-tag">AUDIENCE INTELLIGENCE / 01</span>
+            <h1>NEWSLETTER <span class="admin-accent">PULSE.</span></h1>
+            <p class="admin-subtitle">A live look at the music lovers who joined your list.</p>
+          </div>
+          <div class="admin-heading-mark"><span>F</span><small>EST. 2026</small></div>
+        </div>
+
+        <div class="admin-stats-grid">
+          <article class="admin-stat-card admin-stat-primary">
+            <span class="admin-stat-label">TOTAL SUBSCRIBERS</span>
+            <strong id="subscriber-total">—</strong>
+            <span class="admin-stat-note"><i></i> All-time audience</span>
+          </article>
+          <article class="admin-stat-card">
+            <span class="admin-stat-label">LATEST SIGN-UP</span>
+            <strong id="latest-signup">—</strong>
+            <span class="admin-stat-note">Most recent subscription</span>
+          </article>
+          <article class="admin-stat-card">
+            <span class="admin-stat-label">LIST STATUS</span>
+            <strong class="admin-status-value">LIVE</strong>
+            <span class="admin-stat-note"><i></i> Connected to Supabase</span>
+          </article>
+        </div>
+
+        <section class="admin-list-panel">
+          <div class="admin-panel-heading">
+            <div><span class="section-tag">YOUR COMMUNITY</span><h2>SUBSCRIBER DIRECTORY</h2></div>
+            <button id="refresh-button" class="admin-outline-button" type="button">↻ Refresh</button>
+          </div>
+          <div class="admin-toolbar">
+            <label class="admin-search"><span aria-hidden="true">⌕</span><input id="subscriber-search" type="search" placeholder="Search email addresses..." autocomplete="off"></label>
+            <button id="export-button" class="btn btn-primary btn-pill admin-export" type="button">↓ EXPORT CSV</button>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>SUBSCRIBER</th><th>DATE JOINED</th><th>STATUS</th><th><span class="sr-only">Actions</span></th></tr></thead>
+              <tbody id="subscriber-rows"><tr><td colspan="4" class="admin-empty">Loading your subscribers...</td></tr></tbody>
+            </table>
+          </div>
+          <div class="admin-table-footer"><span id="result-count">—</span><span>Subscriber emails are visible only to authorized admins.</span></div>
+          <p id="dashboard-message" class="admin-message" role="status" aria-live="polite"></p>
+        </section>
+        <p class="admin-bottom-note">HANDLE EMAIL ADDRESSES WITH CARE · FESTORA PRIVATE ADMIN</p>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

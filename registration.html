@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration – FESTORA</title>
+  <meta name="description" content="Demo event registration preview. Reservations are stored locally in this browser and are not paid tickets.">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. Navigation Bar (Ref 1, 6, 7, 8)
+       ========================================================================== -->
+  <header class="site-header is-scrolled" role="banner">
+    <div class="container nav-wrap">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="FESTORA Home">
+        <span class="logo-bars" aria-hidden="true">
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+        </span>
+        <span>FESTORA<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link is-active" aria-current="page">Explore Events</a>
+        <a href="artists.html" class="nav-link">Artists</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="bookings.html" class="nav-link">My Bookings</a>
+      </nav>
+
+      <!-- Nav Utility Actions -->
+      <div class="nav-actions">
+        <button type="button" class="btn-theme-toggle" aria-label="Switch Theme" title="Toggle Dark/Light Mode">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="bookings.html" class="btn btn-secondary btn-pill btn-sm">
+          <span>MY PASSES</span>
+        </a>
+
+        <button type="button" class="btn-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span><span>→</span></a>
+      <a href="events.html" class="mobile-nav-link"><span>Explore Events</span><span>→</span></a>
+      <a href="artists.html" class="mobile-nav-link"><span>Artists</span><span>→</span></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span><span>→</span></a>
+      <a href="bookings.html" class="mobile-nav-link"><span>My Bookings</span><span>→</span></a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="main-content" style="padding-top: 8.5rem; padding-bottom: 5rem;">
+    <div class="container">
+      
+      <!-- 1. Registration Form Container -->
+      <div class="registration-container" id="registration-form-wrap">
+        
+        <div class="registration-header">
+          <span class="section-tag" style="margin-bottom:0.4rem;">DEMO RESERVATION PREVIEW</span>
+          <h1 class="registration-title">REGISTER FOR EVENT</h1>
+          <p class="registration-sub">Enter your details to preview the reservation flow. No payment is collected and no real ticket is issued.</p>
+        </div>
+
+        <form id="registration-form" novalidate>
+          
+          <!-- Participant Name -->
+          <div class="form-group" id="group-name">
+            <label for="reg-name" class="form-label">Full Name *</label>
+            <div class="form-input-icon-wrap">
+              <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <input type="text" id="reg-name" class="form-control form-input-padded" placeholder="e.g. Aryan Sharma" required autocomplete="name">
+            </div>
+            <span class="form-error" id="err-name">Please enter your full name (at least 3 characters).</span>
+          </div>
+
+          <!-- Contact Row (Email & Phone) -->
+          <div class="form-grid-2col">
+            
+            <!-- Email Address -->
+            <div class="form-group" id="group-email">
+              <label for="reg-email" class="form-label">Email Address *</label>
+              <div class="form-input-icon-wrap">
+                <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <input type="email" id="reg-email" class="form-control form-input-padded" placeholder="e.g. aryan@example.com" required autocomplete="email">
+              </div>
+              <span class="form-error" id="err-email">Please enter a valid email address.</span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group" id="group-phone">
+              <label for="reg-phone" class="form-label">Phone Number *</label>
+              <div class="form-input-icon-wrap">
+                <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <input type="tel" id="reg-phone" class="form-control form-input-padded" placeholder="e.g. 9876543210" required autocomplete="tel">
+              </div>
+              <span class="form-error" id="err-phone">Please enter a valid 10-digit phone number.</span>
+            </div>
+
+          </div>
+
+          <!-- Event & Ticket Tier Selection -->
+          <div class="form-grid-2col">
+            
+            <!-- Selected Event -->
+            <div class="form-group" id="group-event">
+              <label for="reg-event" class="form-label">Select Experience *</label>
+              <select id="reg-event" class="form-control" required>
+                <!-- Populated by registration.js -->
+              </select>
+              <span class="form-error" id="err-event">Please select an event.</span>
+            </div>
+
+            <!-- Ticket Category Tier -->
+            <div class="form-group" id="group-tier">
+              <label for="reg-tier" class="form-label">Ticket Category *</label>
+              <select id="reg-tier" class="form-control" required>
+                <!-- Populated based on selected event -->
+              </select>
+              <span class="form-error" id="err-tier">Please select a ticket tier.</span>
+            </div>
+
+          </div>
+
+          <!-- Ticket Quantity -->
+          <div class="form-group" id="group-qty">
+            <label for="reg-qty" class="form-label">Number of Passes (1 to 10) *</label>
+            <input type="number" id="reg-qty" class="form-control" min="1" max="10" value="1" required>
+            <span class="form-error" id="err-qty">Please choose between 1 and 10 tickets.</span>
+          </div>
+
+          <!-- Dynamic Order Calculation Summary -->
+          <div class="order-summary-box">
+            <div class="order-summary-row">
+              <span id="summary-event-name">Event: Sunburn Arena</span>
+              <span id="summary-tier-name">General Access</span>
+            </div>
+            <div class="order-summary-row">
+              <span>Pass Rate</span>
+              <span id="summary-unit-price">₹999 / pass</span>
+            </div>
+            <div class="order-summary-row">
+              <span>Quantity</span>
+              <span id="summary-qty">1 pass</span>
+            </div>
+            <div class="order-summary-row total-row">
+              <span>Total Payable</span>
+              <span class="total-amount" id="summary-total-price">₹999</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="btn-submit-registration" class="btn btn-primary btn-pill btn-block btn-lg glow-orange">
+            <span>SAVE DEMO RESERVATION ↗</span>
+          </button>
+
+          <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:1rem;">
+            Demo only: your details are saved in this browser. Do not enter sensitive personal information.
+          </p>
+
+        </form>
+
+      </div>
+
+      <!-- 2. Confirmation State (YOU'RE ON THE LIST!) -->
+      <div class="confirmation-card" id="registration-confirmation-wrap" style="display: none;">
+        
+        <div class="confirmation-icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <h2 class="confirmation-title">YOU'RE ON THE LIST!</h2>
+        <p class="confirmation-sub">
+          Your demo reservation has been saved in this browser only. This is not a paid ticket or verified admission pass.
+        </p>
+
+        <!-- Digital Pass Card -->
+        <div class="ticket-pass-voucher" id="ticket-pass-content">
+          
+          <div class="ticket-pass-header">
+            <div>
+              <span class="badge badge-yellow" id="confirm-badge">DEMO RESERVATION</span>
+              <h3 class="ticket-pass-event-title" id="confirm-event-name">Sunburn Arena</h3>
+              <p style="font-size:0.82rem;color:var(--text-secondary);margin:0;" id="confirm-event-date-venue">
+                Upcoming date • D.Y. Patil Stadium, Mumbai
+              </p>
+            </div>
+            <div style="text-align:right;">
+              <span style="font-size:0.7rem;text-transform:uppercase;color:var(--text-muted);display:block;">Pass ID</span>
+              <span style="font-family:var(--font-heading);font-weight:700;color:var(--accent-primary);" id="confirm-pass-id">FST-849201</span>
+            </div>
+          </div>
+
+          <div class="ticket-pass-meta-grid">
+            <div>
+              <div class="ticket-pass-field-label">Primary Attendee</div>
+              <div class="ticket-pass-field-val" id="confirm-attendee-name">Aryan Sharma</div>
+            </div>
+            <div>
+              <div class="ticket-pass-field-label">Tier Category</div>
+              <div class="ticket-pass-field-val" id="confirm-tier-name">VIP Access</div>
+            </div>
+            <div>
+              <div class="ticket-pass-field-label">Pass Quantity</div>
+              <div class="ticket-pass-field-val" id="confirm-qty">2 Passes</div>
+            </div>
+            <div>
+              <div class="ticket-pass-field-label">Total Amount</div>
+              <div class="ticket-pass-field-val" style="color:var(--accent-primary);" id="confirm-total">₹4,998</div>
+            </div>
+          </div>
+
+          <!-- Simulated QR Code -->
+          <div class="qr-code-wrap">
+            <svg class="qr-code-svg" viewBox="0 0 100 100" fill="#090909" aria-label="Pass barcode">
+              <!-- QR Patterns -->
+              <rect x="10" y="10" width="24" height="24" fill="#090909"/>
+              <rect x="14" y="14" width="16" height="16" fill="#fff"/>
+              <rect x="18" y="18" width="8" height="8" fill="#090909"/>
+              
+              <rect x="66" y="10" width="24" height="24" fill="#090909"/>
+              <rect x="70" y="14" width="16" height="16" fill="#fff"/>
+              <rect x="74" y="18" width="8" height="8" fill="#090909"/>
+              
+              <rect x="10" y="66" width="24" height="24" fill="#090909"/>
+              <rect x="14" y="70" width="16" height="16" fill="#fff"/>
+              <rect x="18" y="74" width="8" height="8" fill="#090909"/>
+
+              <rect x="42" y="12" width="6" height="6"/>
+              <rect x="52" y="20" width="6" height="6"/>
+              <rect x="44" y="44" width="12" height="12"/>
+              <rect x="66" y="52" width="8" height="6"/>
+              <rect x="78" y="68" width="10" height="8"/>
+              <rect x="42" y="76" width="8" height="8"/>
+              <rect x="24" y="44" width="6" height="8"/>
+            </svg>
+            <span style="font-size:0.75rem;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;">Present at Venue Gate for Wristband</span>
+          </div>
+
+        </div>
+
+        <!-- Confirmation Actions -->
+        <div class="confirmation-actions">
+          <a href="bookings.html" class="btn btn-primary btn-pill">
+            <span>VIEW IN MY BOOKINGS ↗</span>
+          </a>
+          <button type="button" class="btn btn-secondary btn-pill" onclick="window.print()">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect width="12" height="8" x="6" y="14"></rect>
+            </svg>
+            <span>PRINT PASS SUMMARY</span>
+          </button>
+          <a href="events.html" class="btn btn-ghost btn-pill">
+            <span>Explore More Events</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-main">
+      <div>
+        <a href="index.html" class="brand-logo">
+          <span class="logo-bars"><span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span></span>
+          <span>FESTORA<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-brand-desc">Feel the Music. Live the Moment. Verified pass reservation platform.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">LINKS</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="events.html" class="footer-link">Explore Events</a></li>
+          <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link">About FESTORA</a></li>
+          <li><a href="about.html#contact" class="footer-link">Help Desk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div><span>© 2026 FESTORA Technologies Ltd.</span></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/events.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/registration.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

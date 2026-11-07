@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FESTORA – Feel the Music. Live the Moment.</title>
+  <meta name="description" content="Discover world-class concerts, music festivals, live performances and artist tours. Explore lineups and book your passes with FESTORA.">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. Navigation Bar (Ref 1, 6, 7, 8)
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-wrap">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="FESTORA Home">
+        <span class="logo-bars" aria-hidden="true">
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+        </span>
+        <span>FESTORA<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="events.html" class="nav-link">Explore Events</a>
+        <a href="artists.html" class="nav-link">Artists</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="bookings.html" class="nav-link">My Bookings</a>
+      </nav>
+
+      <!-- Nav Utility Actions -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button type="button" class="btn-theme-toggle" aria-label="Switch Theme" title="Toggle Dark/Light Mode">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Quick Search Link -->
+        <a href="events.html?focus=search" class="btn-search-trigger" aria-label="Search events" title="Search Events">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+
+        <!-- Primary CTA Button -->
+        <a href="events.html" class="btn btn-primary btn-pill btn-sm">
+          <span>GET TICKETS</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">
+        <span>Home</span>
+        <span>→</span>
+      </a>
+      <a href="events.html" class="mobile-nav-link">
+        <span>Explore Events</span>
+        <span>→</span>
+      </a>
+      <a href="artists.html" class="mobile-nav-link">
+        <span>Artists</span>
+        <span>→</span>
+      </a>
+      <a href="about.html" class="mobile-nav-link">
+        <span>About</span>
+        <span>→</span>
+      </a>
+      <a href="bookings.html" class="mobile-nav-link">
+        <span>My Bookings</span>
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <a href="events.html" class="btn btn-primary btn-pill btn-block">
+        <span>EXPLORE EVENTS ↗</span>
+      </a>
+      <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+        FESTORA © 2026. All rights reserved.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Main Content Placeholder for Milestone 4+ -->
+  <main id="main-content">
+    
+    <!-- ==========================================================================
+         2. Cinematic Hero Section (Ref 4, 15, 6, 2)
+         ========================================================================== -->
+    <section class="hero-section" id="hero" aria-label="Hero Introduction">
+      
+      <!-- Full-bleed Concert Backdrop Image -->
+      <div class="hero-bg-wrap">
+        <img class="hero-bg-img" 
+             src="assets/images/hero/hero-concert.jpg" 
+             alt="Vibrant concert crowd with hands raised reaching towards glowing golden and orange stage lights"
+             loading="eager"
+             fetchpriority="high">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          
+          <!-- Category / Live Pill Badge -->
+          <div class="hero-badge-pill animate-fade-up">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>2026 FESTIVAL TOUR CALENDAR OPEN</span>
+          </div>
+
+          <!-- Main Oversized Heading -->
+          <h1 class="hero-title animate-fade-up delay-100">
+            FEEL THE MUSIC.
+            <span class="title-accent">LIVE THE MOMENT.</span>
+          </h1>
+
+          <!-- Supporting Description -->
+          <p class="hero-desc animate-fade-up delay-200">
+            Discover the world's most unforgettable concerts, festivals and live experiences. 
+            Immerse yourself in laser-mapped arenas, world-class lineups, and pure acoustic energy.
+          </p>
+
+          <!-- Primary Call to Actions -->
+          <div class="hero-cta-group animate-fade-up delay-300">
+            <a href="events.html" class="btn btn-primary btn-pill btn-lg glow-orange">
+              <span>EXPLORE EVENTS ↗</span>
+            </a>
+            
+            <button type="button" class="btn-hero-video btn-pill" id="btn-hero-video" aria-label="Watch festival aftermovie">
+              <span class="play-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </span>
+              <span>WATCH AFTERMOVIE</span>
+            </button>
+          </div>
+
+          <!-- Festival Metrics Strip -->
+          <div class="hero-metrics-strip animate-fade-up delay-400">
+            <div class="hero-metric-item">
+              <span class="hero-metric-val">120K+</span>
+              <span class="hero-metric-label">Passes Issued</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val">50+</span>
+              <span class="hero-metric-label">Global Artists</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val">12</span>
+              <span class="hero-metric-label">Iconic Arenas</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Floating Festival Proof Card (Ref 6 & 4) -->
+        <div class="hero-floating-card animate-fade-up delay-300" aria-label="Featured Festival Quick Pass">
+          <div class="hero-card-header">
+            <div class="attendee-stack" title="Recent attendees">
+              <img src="assets/images/artists/artist-01.jpg" alt="Attendee" class="attendee-avatar">
+              <img src="assets/images/artists/artist-02.jpg" alt="Attendee" class="attendee-avatar">
+              <img src="assets/images/artists/artist-03.jpg" alt="Attendee" class="attendee-avatar">
+            </div>
+            <span class="badge badge-live">SELLING FAST</span>
+          </div>
+
+          <div>
+            <div class="hero-card-count">120K+</div>
+            <div class="hero-card-label">Music lovers joined this season</div>
+          </div>
+
+          <!-- Mini Featured Card -->
+          <div class="hero-card-highlight">
+            <div class="badge badge-yellow" style="margin-bottom: 0.4rem;">FEATURED HEADLINER</div>
+            <div class="hero-card-event-name">Sunburn Arena</div>
+            <div class="hero-card-meta">
+              <span>Dec 12 • Mumbai</span>
+              <span class="hero-card-price">From ₹999</span>
+            </div>
+          </div>
+
+          <a href="event-details.html?id=sunburn-arena" class="btn btn-secondary btn-sm btn-block">
+            <span>GET PASSES ↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. Upcoming Events Section (Ref 7, 8, 5)
+         ========================================================================== -->
+    <section class="section" id="upcoming-events" aria-label="Upcoming Events">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-title-wrap">
+            <span class="section-tag">CURATED EXPERIENCES</span>
+            <h2 class="section-title">UPCOMING EVENTS</h2>
+            <p class="section-subtitle">The moments you've been waiting for. Hand-picked electronic arenas, stadium tours, and open-air festivals.</p>
+          </div>
+          <div class="section-action">
+            <a href="events.html" class="btn btn-secondary btn-pill btn-sm">
+              <span>EXPLORE ALL EVENTS</span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dynamic Event Cards Grid -->
+        <div class="events-grid" id="homepage-events-grid">
+          <!-- Rendered dynamically on load by FestoraData -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. Browse Music Categories (Ref 14)
+         ========================================================================== -->
+    <section class="section categories-section" id="categories" aria-label="Browse Music Categories">
+      <div class="category-neon-waves" aria-hidden="true"></div>
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-title-wrap">
+            <span class="section-tag">EXPLORE GENRES</span>
+            <h2 class="section-title">BROWSE BY CATEGORY</h2>
+            <p class="section-subtitle">Find your frequency. From thunderous festival mainstages to intimate underground acoustic sets.</p>
+          </div>
+          <div class="section-action">
+            <a href="events.html" class="btn btn-secondary btn-pill btn-sm">
+              <span>ALL GENRES</span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6 Category Tiles (Ref 14) -->
+        <div class="category-grid">
+          
+          <!-- Tile 1: POP -->
+          <a href="events.html?genre=Pop" class="category-tile reveal-on-scroll" aria-label="Browse Pop Music Events">
+            <img class="category-tile-bg" src="assets/images/categories/pop.jpg" alt="Pop music festival" loading="lazy">
+            <div class="category-tile-overlay"></div>
+            <div class="category-tile-content">
+              <span class="category-pill">
+                <span>POP</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Tile 2: EDM -->
+          <a href="events.html?genre=EDM" class="category-tile reveal-on-scroll" aria-label="Browse EDM Music Events">
+            <img class="category-tile-bg" src="assets/images/categories/edm.jpg" alt="Electronic dance music festival" loading="lazy">
+            <div class="category-tile-overlay"></div>
+            <div class="category-tile-content">
+              <span class="category-pill">
+                <span>EDM</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Tile 3: INDIE -->
+          <a href="events.html?genre=Indie" class="category-tile reveal-on-scroll" aria-label="Browse Indie Music Events">
+            <img class="category-tile-bg" src="assets/images/categories/indie.jpg" alt="Indie music concert" loading="lazy">
+            <div class="category-tile-overlay"></div>
+            <div class="category-tile-content">
+              <span class="category-pill">
+                <span>INDIE</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Tile 4: ROCK -->
+          <a href="events.html?genre=Rock" class="category-tile reveal-on-scroll" aria-label="Browse Rock Music Events">
+            <img class="category-tile-bg" src="assets/images/categories/rock.jpg" alt="Rock music performance" loading="lazy">
+            <div class="category-tile-overlay"></div>
+            <div class="category-tile-content">
+              <span class="category-pill">
+                <span>ROCK</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Tile 5: JAZZ -->
+          <a href="events.html?genre=Jazz" class="category-tile reveal-on-scroll" aria-label="Browse Jazz & Acoustic Events">
+            <img class="category-tile-bg" src="assets/images/categories/jazz.jpg" alt="Jazz and acoustic musician" loading="lazy">
+            <div class="category-tile-overlay"></div>
+            <div class="category-tile-content">
+              <span class="category-pill">
+                <span>JAZZ</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Tile 6: HIP HOP -->
+          <a href="events.html?genre=Hip-Hop" class="category-tile reveal-on-scroll" aria-label="Browse Hip-Hop Events">
+            <img class="category-tile-bg" src="assets/images/categories/hiphop.jpg" alt="Hip-Hop concert performance" loading="lazy">
+            <div class="category-tile-overlay"></div>
+            <div class="category-tile-content">
+              <span class="category-pill">
+                <span>HIP HOP</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. Featured Artists Showcase (Ref 12 & 13)
+         ========================================================================== -->
+    <section class="section artists-section" id="artists" aria-label="Featured Artists">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-title-wrap">
+            <span class="section-tag">GLOBAL HEADLINERS</span>
+            <h2 class="section-title">FEATURED ARTISTS</h2>
+            <p class="section-subtitle">The visionary sound architects setting festival stages ablaze worldwide.</p>
+          </div>
+          <div class="section-action">
+            <a href="artists.html" class="btn btn-secondary btn-pill btn-sm">
+              <span>VIEW ALL ARTISTS</span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Artists Grid (Ref 12 & 13) -->
+        <div class="artists-grid">
+          
+          <!-- Artist 1 -->
+          <article class="artist-card reveal-on-scroll">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-01.jpg" alt="Charlotte de Witte" loading="lazy">
+              <div class="artist-badge-top">
+                <span class="badge badge-live">LIVE ACT</span>
+              </div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Acid Techno</span>
+              <h3 class="artist-name">Charlotte de Witte</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Headlining Sunburn Arena</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Solar Stage • Dec 12</span>
+                <span style="display:inline-flex;align-items:center;gap:4px;">VIEW TOUR ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 2 -->
+          <article class="artist-card reveal-on-scroll">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-02.jpg" alt="Amélie Lens" loading="lazy">
+              <div class="artist-badge-top">
+                <span class="badge badge-live">DJ SET</span>
+              </div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Peak-Time Techno</span>
+              <h3 class="artist-name">Amélie Lens</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Headlining Neon Nights</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Turbine Hall • Nov 08</span>
+                <span style="display:inline-flex;align-items:center;gap:4px;">VIEW TOUR ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 3 -->
+          <article class="artist-card reveal-on-scroll">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-03.jpg" alt="Drayen" loading="lazy">
+              <div class="artist-badge-top">
+                <span class="badge badge-orange">HEADLINER</span>
+              </div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Alternative Rock</span>
+              <h3 class="artist-name">Drayen</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>The Midnight Tour Live</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Main Stage • Sep 15</span>
+                <span style="display:inline-flex;align-items:center;gap:4px;">VIEW TOUR ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 4 -->
+          <article class="artist-card reveal-on-scroll">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-04.jpg" alt="Joris Voorn" loading="lazy">
+              <div class="artist-badge-top">
+                <span class="badge badge-purple">SPECIAL GUEST</span>
+              </div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Melodic House</span>
+              <h3 class="artist-name">Joris Voorn</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Echoes of Tomorrow Main Stage</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Solar Stage • Aug 20</span>
+                <span style="display:inline-flex;align-items:center;gap:4px;">VIEW TOUR ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 5 -->
+          <article class="artist-card reveal-on-scroll">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-05.jpg" alt="Alec Troniq" loading="lazy">
+              <div class="artist-badge-top">
+                <span class="badge badge-live">LIVE ACT</span>
+              </div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Deep Electronic</span>
+              <h3 class="artist-name">Alec Troniq</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Aurora Stage Live Session</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Aurora Stage • Dec 12</span>
+                <span style="display:inline-flex;align-items:center;gap:4px;">VIEW TOUR ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 6 -->
+          <article class="artist-card reveal-on-scroll">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-06.jpg" alt="Sonora Collective" loading="lazy">
+              <div class="artist-badge-top">
+                <span class="badge badge-yellow">SPECIAL VOCAL</span>
+              </div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Dream Pop & Soul</span>
+              <h3 class="artist-name">Sonora Collective</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Indie Waves Festival Headline</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Garden Stage • Oct 04</span>
+                <span style="display:inline-flex;align-items:center;gap:4px;">VIEW TOUR ↗</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. Featured Festival Countdown Banner (Ref 6, 11, 4)
+         ========================================================================== -->
+    <section class="countdown-section" id="festival-countdown" aria-label="Featured Festival Countdown">
+      
+      <!-- Atmospheric Festival Backdrop -->
+      <div class="countdown-bg-wrap">
+        <img class="countdown-bg-img" 
+             src="assets/images/backgrounds/countdown-bg.jpg" 
+             alt="Echoes of Tomorrow massive illuminated stage" 
+             loading="lazy">
+        <div class="countdown-overlay"></div>
+      </div>
+
+      <div class="container countdown-content">
+        
+        <!-- Overline Tag -->
+        <div class="badge badge-orange reveal-on-scroll" style="margin-bottom: 1.25rem;">
+          <span>FEATURED MEGA FESTIVAL</span>
+        </div>
+
+        <!-- Festival Title -->
+        <h2 class="section-title reveal-on-scroll" style="font-size: clamp(2.2rem, 4.8vw, 3.8rem); line-height: 1.05; margin-bottom: 1rem;">
+          ECHOES OF TOMORROW
+        </h2>
+
+        <!-- Event Details Meta -->
+        <p class="reveal-on-scroll" style="font-size: clamp(1rem, 1.6vw, 1.2rem); color: var(--text-secondary); max-width: 680px; margin: 0 auto;">
+          <span id="homepage-featured-meta">Vagator Hilltop, Goa • 3 Stages • 48 Hours of Sonic Euphoria</span>
+        </p>
+
+        <!-- Working Live Countdown Display -->
+        <div class="countdown-timer-wrap reveal-on-scroll" id="homepage-countdown" data-target="" role="timer" aria-live="polite">
+          
+          <div class="countdown-box">
+            <span class="countdown-num" data-unit="days">00</span>
+            <span class="countdown-label">DAYS</span>
+          </div>
+
+          <span class="countdown-divider" aria-hidden="true">:</span>
+
+          <div class="countdown-box">
+            <span class="countdown-num" data-unit="hours">00</span>
+            <span class="countdown-label">HOURS</span>
+          </div>
+
+          <span class="countdown-divider" aria-hidden="true">:</span>
+
+          <div class="countdown-box">
+            <span class="countdown-num" data-unit="minutes">00</span>
+            <span class="countdown-label">MINUTES</span>
+          </div>
+
+          <span class="countdown-divider" aria-hidden="true">:</span>
+
+          <div class="countdown-box">
+            <span class="countdown-num" data-unit="seconds">00</span>
+            <span class="countdown-label">SECONDS</span>
+          </div>
+
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="countdown-actions reveal-on-scroll">
+          <a href="event-details.html?id=echoes-tomorrow" class="btn btn-primary btn-pill btn-lg glow-orange">
+            <span>SECURE EARLY BIRD PASSES ↗</span>
+          </a>
+          <a href="event-details.html?id=echoes-tomorrow" class="btn btn-secondary btn-pill btn-lg">
+            <span>VIEW FULL LINEUP</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       7. Global Footer Component (Ref 4 & 5)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    
+    <!-- Newsletter Strip (Ref 5: GET TRENDING EVENT NOTIFICATIONS) -->
+    <div class="newsletter-strip">
+      <div class="container newsletter-grid">
+        
+        <div>
+          <span class="section-tag" style="margin-bottom: 0.35rem;">STAY TUNED</span>
+          <h3 class="newsletter-title">GET TRENDING EVENT NOTIFICATIONS</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">
+            Be the first to unlock exclusive secret warehouse drops, headliner announcements, and early bird tickets.
+          </p>
+        </div>
+
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <input type="email" 
+                 class="newsletter-input" 
+                 id="newsletter-email" 
+                 placeholder="Enter your email address..." 
+                 aria-label="Email address for notifications" 
+                 required>
+          <button type="submit" class="btn btn-primary btn-pill">
+            <span>SUBSCRIBE</span>
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Main Footer Grid -->
+    <div class="container footer-main">
+      
+      <!-- Brand & Mission Column -->
+      <div>
+        <a href="index.html" class="brand-logo" aria-label="FESTORA Home">
+          <span class="logo-bars" aria-hidden="true">
+            <span class="logo-bar"></span>
+            <span class="logo-bar"></span>
+            <span class="logo-bar"></span>
+          </span>
+          <span>FESTORA<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-brand-desc">
+          Feel the Music. Live the Moment. Discover unforgettable concerts, electronic music festivals, and live stadium tours worldwide.
+        </p>
+        <div class="social-links" aria-label="Social media channels">
+          <button type="button" class="social-btn" data-social-placeholder="Instagram" aria-label="Instagram profile not connected">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </button>
+          <button type="button" class="social-btn" data-social-placeholder="X / Twitter" aria-label="X / Twitter profile not connected">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </button>
+          <button type="button" class="social-btn" data-social-placeholder="YouTube" aria-label="YouTube profile not connected">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </button>
+          <button type="button" class="social-btn" data-social-placeholder="Spotify" aria-label="Spotify profile not connected">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="events.html" class="footer-link">Explore Events</a></li>
+          <li><a href="artists.html" class="footer-link">Featured Artists</a></li>
+          <li><a href="about.html" class="footer-link">About FESTORA</a></li>
+          <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+        </ul>
+      </div>
+
+      <!-- Genres -->
+      <div>
+        <h4 class="footer-heading">MUSIC GENRES</h4>
+        <ul class="footer-links">
+          <li><a href="events.html?genre=EDM" class="footer-link">EDM & Techno</a></li>
+          <li><a href="events.html?genre=Rock" class="footer-link">Rock & Alternative</a></li>
+          <li><a href="events.html?genre=Hip-Hop" class="footer-link">Hip-Hop & Urban</a></li>
+          <li><a href="events.html?genre=Indie" class="footer-link">Indie & Dream Pop</a></li>
+          <li><a href="events.html?genre=Pop" class="footer-link">Pop & Acoustic</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Festival HQ -->
+      <div>
+        <h4 class="footer-heading">FESTIVAL HQ</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Festival Tower, Bandra Kurla Complex, Mumbai, India</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span>passes@festora.live</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>+91 (022) 8492-3000</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Legal Bar -->
+    <div class="container footer-bottom">
+      <div>
+        <span>© 2026 FESTORA Technologies Ltd. Feel the Music. Live the Moment.</span>
+      </div>
+      <div class="footer-legal-links">
+        <a href="about.html#terms">Terms of Service</a>
+        <a href="about.html#privacy">Privacy Policy</a>
+        <a href="about.html#security">Ticketing Guarantee</a>
+      </div>
+    </div>
+
+  </footer>
+
+  </main>
+
+  <!-- Video Modal (Simulated Festival Aftermovie Experience) -->
+  <div class="video-modal-backdrop" id="video-modal" aria-hidden="true" style="display: none;">
+    <div class="video-modal-container">
+      <button type="button" class="video-modal-close" id="btn-close-video" aria-label="Close aftermovie">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="video-embed-wrap">
+        <!-- Visual teaser with animated soundbars & festival crowd teaser -->
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <img src="assets/images/hero/hero-concert.jpg" alt="Concert preview" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.65;">
+          <div style="position: relative; z-index: 2; text-align: center; padding: 2rem;">
+            <div class="badge badge-orange" style="margin-bottom: 1rem;">OFFICIAL AFTERMOVIE</div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #fff;">FESTORA AFTERMOVIE</h3>
+            <p style="color: #ccc; margin-bottom: 1.5rem; max-width: 500px;">Experience the sound, the pyro, and 120,000 voices singing as one.</p>
+            <div class="sound-bars" style="margin-bottom: 1.5rem;">
+              <span class="sound-bar"></span>
+              <span class="sound-bar"></span>
+              <span class="sound-bar"></span>
+              <span class="sound-bar"></span>
+            </div>
+            <a href="events.html" class="btn btn-primary btn-pill"><span>DISCOVER UPCOMING DATES ↗</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="js/events.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

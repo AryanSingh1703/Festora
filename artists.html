@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Lineup & Roster – FESTORA</title>
+  <meta name="description" content="Discover global music headliners, underground electronic DJs, and tour schedules on FESTORA.">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. Navigation Bar (Ref 1, 6, 7, 8)
+       ========================================================================== -->
+  <header class="site-header is-scrolled" role="banner">
+    <div class="container nav-wrap">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="FESTORA Home">
+        <span class="logo-bars" aria-hidden="true">
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+        </span>
+        <span>FESTORA<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link">Explore Events</a>
+        <a href="artists.html" class="nav-link active">Artists</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="bookings.html" class="nav-link">My Bookings</a>
+      </nav>
+
+      <!-- Nav Utility Actions -->
+      <div class="nav-actions">
+        <button type="button" class="btn-theme-toggle" aria-label="Switch Theme" title="Toggle Dark/Light Mode">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="events.html" class="btn btn-primary btn-pill btn-sm">
+          <span>GET TICKETS</span>
+        </a>
+
+        <button type="button" class="btn-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span><span>→</span></a>
+      <a href="events.html" class="mobile-nav-link"><span>Explore Events</span><span>→</span></a>
+      <a href="artists.html" class="mobile-nav-link active"><span>Artists</span><span>→</span></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span><span>→</span></a>
+      <a href="bookings.html" class="mobile-nav-link"><span>My Bookings</span><span>→</span></a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Page Header (Ref 12: THE LINE UP) -->
+    <section class="page-header" aria-label="Artists Header">
+      <div class="page-header-bg" aria-hidden="true"></div>
+      <div class="container page-header-content">
+        <span class="page-header-tag">● EDITORIAL ARTIST ROSTER</span>
+        <h1 class="page-header-title">THE LINE UP & ARTISTS</h1>
+        <p class="page-header-desc">
+          There's music in space. Explore global headliners, underground selectors, and multi-instrumentalists defining the FESTORA festival circuit.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section" style="padding-top: 3.5rem;" aria-label="Artist Roster">
+      <div class="container">
+        
+        <!-- Featured Spotlight Banner (Ref 6 & 12) -->
+        <div class="artist-spotlight-banner reveal-on-scroll">
+          <div class="artist-spotlight-img-wrap">
+            <img class="artist-spotlight-img" src="assets/images/artists/artist-01.jpg" alt="Charlotte de Witte performing live">
+          </div>
+          <div class="artist-spotlight-body">
+            <span class="artist-tag-pill">● ARTIST SPOTLIGHT OF THE MONTH</span>
+            <div class="artist-spotlight-quote">
+              "Techno is not just music; it's an architecture of frequency and relentless physical immersion."
+            </div>
+            <p class="artist-bio-snippet">
+              Global acid techno pioneer Charlotte de Witte headlines the Sunburn Arena experience in Mumbai.
+            </p>
+            <div style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:0.5rem;">
+              <a href="event-details.html?id=sunburn-arena" class="btn btn-primary btn-pill btn-sm glow-orange">
+                <span>HEADLINING SUNBURN ARENA ↗</span>
+              </a>
+              <span style="font-size:0.85rem;color:var(--text-muted);">Solar Stage • Upcoming event</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter & Search Bar for Artists (Ref 13) -->
+        <div class="filter-panel" style="margin-bottom: 2.5rem;">
+          <div class="filter-search-box">
+            <svg class="filter-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" 
+                   id="artist-search-input" 
+                   class="filter-search-input" 
+                   placeholder="Search artists by name or genre..." 
+                   aria-label="Search artists">
+          </div>
+
+          <div class="filter-chips-row" id="artist-genre-chips" role="group" aria-label="Filter artists by genre">
+            <button type="button" class="filter-chip active" data-genre="All">All Genres</button>
+            <button type="button" class="filter-chip" data-genre="Techno">Techno</button>
+            <button type="button" class="filter-chip" data-genre="Rock">Rock</button>
+            <button type="button" class="filter-chip" data-genre="Indie">Indie & Pop</button>
+            <button type="button" class="filter-chip" data-genre="Electronic">Live Electronic</button>
+          </div>
+        </div>
+
+        <!-- Editorial Artist Grid (Ref 12 & 13) -->
+        <div class="artists-grid" id="artists-catalog-grid">
+          
+          <!-- Artist 1 -->
+          <article class="artist-card reveal-on-scroll" data-name="Charlotte de Witte" data-genre="Techno">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-01.jpg" alt="Charlotte de Witte" loading="lazy">
+              <div class="artist-badge-top"><span class="badge badge-live">LIVE ACT</span></div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Acid Techno</span>
+              <h3 class="artist-name">Charlotte de Witte</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Sunburn Arena • Upcoming event</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Solar Stage</span>
+                <a href="event-details.html?id=sunburn-arena" style="color:var(--accent-primary);font-weight:700;">TOUR PASSES ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 2 -->
+          <article class="artist-card reveal-on-scroll" data-name="Amélie Lens" data-genre="Techno">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-02.jpg" alt="Amélie Lens" loading="lazy">
+              <div class="artist-badge-top"><span class="badge badge-live">DJ SET</span></div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Peak-Time Techno</span>
+              <h3 class="artist-name">Amélie Lens</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Neon Nights Underground • Demo listing</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Turbine Hall</span>
+                <a href="event-details.html?id=neon-nights" style="color:var(--accent-primary);font-weight:700;">TOUR PASSES ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 3 -->
+          <article class="artist-card reveal-on-scroll" data-name="Drayen" data-genre="Rock">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-03.jpg" alt="Drayen" loading="lazy">
+              <div class="artist-badge-top"><span class="badge badge-orange">HEADLINER</span></div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Alternative Rock</span>
+              <h3 class="artist-name">Drayen</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>The Midnight Tour Live • Demo listing</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Main Arena Stage</span>
+                <a href="event-details.html?id=midnight-tour" style="color:var(--accent-primary);font-weight:700;">TOUR PASSES ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 4 -->
+          <article class="artist-card reveal-on-scroll" data-name="Joris Voorn" data-genre="Techno">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-04.jpg" alt="Joris Voorn" loading="lazy">
+              <div class="artist-badge-top"><span class="badge badge-purple">SPECIAL GUEST</span></div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Melodic House</span>
+              <h3 class="artist-name">Joris Voorn</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Echoes of Tomorrow • Upcoming event</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Solar Stage</span>
+                <a href="event-details.html?id=echoes-tomorrow" style="color:var(--accent-primary);font-weight:700;">TOUR PASSES ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 5 -->
+          <article class="artist-card reveal-on-scroll" data-name="Alec Troniq" data-genre="Electronic">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-05.jpg" alt="Alec Troniq" loading="lazy">
+              <div class="artist-badge-top"><span class="badge badge-live">LIVE ACT</span></div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Deep Electronic</span>
+              <h3 class="artist-name">Alec Troniq</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Aurora Stage Live • Dec 12</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Aurora Stage</span>
+                <a href="event-details.html?id=sunburn-arena" style="color:var(--accent-primary);font-weight:700;">TOUR PASSES ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artist 6 -->
+          <article class="artist-card reveal-on-scroll" data-name="Sonora Collective" data-genre="Indie">
+            <div class="artist-portrait-wrap">
+              <img class="artist-portrait" src="assets/images/artists/artist-06.jpg" alt="Sonora Collective" loading="lazy">
+              <div class="artist-badge-top"><span class="badge badge-yellow">VOCALIST</span></div>
+            </div>
+            <div class="artist-card-body">
+              <span class="artist-genre-tag">Dream Pop & Soul</span>
+              <h3 class="artist-name">Sonora Collective</h3>
+              <p class="artist-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Indie Waves Festival • Oct 04</span>
+              </p>
+              <div class="artist-card-footer">
+                <span>Garden Stage</span>
+                <a href="event-details.html?id=indie-waves" style="color:var(--accent-primary);font-weight:700;">TOUR PASSES ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty Filter State -->
+        <div class="empty-state" id="artist-empty-state" style="display: none;">
+          <h3 class="empty-state-title">NO ARTISTS FOUND</h3>
+          <p class="empty-state-desc">No artists match your query. Try searching for a different name or resetting genre filters.</p>
+          <button type="button" class="btn btn-primary btn-pill" id="btn-reset-artists"><span>VIEW ALL ARTISTS</span></button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-main">
+      <div>
+        <a href="index.html" class="brand-logo">
+          <span class="logo-bars"><span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span></span>
+          <span>FESTORA<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-brand-desc">Feel the Music. Live the Moment. Global lineup discovery and tour schedules.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="events.html" class="footer-link">Explore Events</a></li>
+          <li><a href="artists.html" class="footer-link">Artists</a></li>
+          <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link">About FESTORA</a></li>
+          <li><a href="about.html#contact" class="footer-link">Artist Inquiries</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div><span>© 2026 FESTORA.</span></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/events.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Inline Artist Filter Script
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('artist-search-input');
+      const chips = document.querySelectorAll('#artist-genre-chips .filter-chip');
+      const cards = document.querySelectorAll('#artists-catalog-grid .artist-card');
+      const emptyState = document.getElementById('artist-empty-state');
+      const resetBtn = document.getElementById('btn-reset-artists');
+
+      let activeGenre = 'All';
+      let searchQuery = '';
+
+      function filterArtists() {
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const name = (card.getAttribute('data-name') || '').toLowerCase();
+          const genre = (card.getAttribute('data-genre') || '').toLowerCase();
+
+          const matchesQuery = !searchQuery || name.includes(searchQuery) || genre.includes(searchQuery);
+          const matchesGenre = activeGenre === 'All' || genre.includes(activeGenre.toLowerCase());
+
+          if (matchesQuery && matchesGenre) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (emptyState) {
+          emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.trim().toLowerCase();
+          filterArtists();
+        });
+      }
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          activeGenre = chip.getAttribute('data-genre');
+          filterArtists();
+        });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          searchQuery = '';
+          activeGenre = 'All';
+          if (searchInput) searchInput.value = '';
+          chips.forEach(c => c.classList.remove('active'));
+          const allChip = document.querySelector('#artist-genre-chips [data-genre="All"]');
+          if (allChip) allChip.classList.add('active');
+          filterArtists();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

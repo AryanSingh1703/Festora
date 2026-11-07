@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us & Mission – FESTORA</title>
+  <meta name="description" content="Discover the story and ethos behind FESTORA — connecting music lovers to world-class live experiences and music festivals.">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. Navigation Bar (Ref 1, 6, 7, 8)
+       ========================================================================== -->
+  <header class="site-header is-scrolled" role="banner">
+    <div class="container nav-wrap">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="FESTORA Home">
+        <span class="logo-bars" aria-hidden="true">
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+          <span class="logo-bar"></span>
+        </span>
+        <span>FESTORA<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link">Explore Events</a>
+        <a href="artists.html" class="nav-link">Artists</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="bookings.html" class="nav-link">My Bookings</a>
+      </nav>
+
+      <!-- Nav Utility Actions -->
+      <div class="nav-actions">
+        <button type="button" class="btn-theme-toggle" aria-label="Switch Theme" title="Toggle Dark/Light Mode">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="events.html" class="btn btn-primary btn-pill btn-sm">
+          <span>GET TICKETS</span>
+        </a>
+
+        <button type="button" class="btn-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span><span>→</span></a>
+      <a href="events.html" class="mobile-nav-link"><span>Explore Events</span><span>→</span></a>
+      <a href="artists.html" class="mobile-nav-link"><span>Artists</span><span>→</span></a>
+      <a href="about.html" class="mobile-nav-link active"><span>About</span><span>→</span></a>
+      <a href="bookings.html" class="mobile-nav-link"><span>My Bookings</span><span>→</span></a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section (Ref 4 & 15) -->
+    <section class="about-hero" aria-label="About FESTORA Hero">
+      <img class="about-hero-bg" src="assets/images/backgrounds/about-bg.jpg" alt="Concert crowd in stage lighting">
+      <div class="container" style="position:relative;z-index:2;max-width:860px;margin:0 auto;">
+        <span class="section-tag" style="margin-bottom:0.6rem;">THE FESTORA MANIFESTO</span>
+        <h1 class="page-header-title" style="font-size:clamp(2.4rem, 5.5vw, 4.4rem);line-height:1.05;">
+          MORE THAN MUSIC.<br>
+          <span class="text-accent">IT'S AN EXPERIENCE.</span>
+        </h1>
+        <p style="font-size:1.15rem;color:var(--text-secondary);max-width:680px;margin:1.25rem auto 0;line-height:1.65;">
+          FESTORA was born from a singular obsession: to connect sound purists, festival-goers, and underground electronic communities directly with the world’s most unforgettable live experiences.
+        </p>
+      </div>
+    </section>
+
+    <!-- Brand Story & Mission Section -->
+    <section class="section" aria-label="Our Story & Mission">
+      <div class="container">
+        
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;" class="about-story-grid">
+          <div>
+            <span class="section-tag">OUR ORIGINS</span>
+            <h2 class="section-title" style="font-size:2.2rem;margin-bottom:1.25rem;">THE REBELLION AGAINST GENERIC TICKETING</h2>
+            <p class="detail-text" style="margin-bottom:1rem;">
+              For too long, live music discovery was buried behind generic corporate white dashboards, opaque service fees, and predatory ticket brokers. We believed that discovering a music festival should feel as electric, cinematic, and visceral as stepping onto the festival grounds at sunset.
+            </p>
+            <p class="detail-text">
+              FESTORA combines dark, high-contrast aesthetics with modern web architecture to provide music lovers with clear event information, illustrative lineups and schedules, and a browser-based demo reservation flow.
+            </p>
+          </div>
+
+          <div style="background-color:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:2.5rem;box-shadow:var(--shadow-md);">
+            <h3 style="font-size:1.4rem;font-weight:700;color:var(--text-primary);text-transform:uppercase;margin-bottom:1rem;">
+              WHY LIVE MUSIC MATTERS
+            </h3>
+            <p class="detail-text" style="font-size:0.95rem;margin-bottom:1.5rem;">
+              In a digital world dominated by algorithmic feeds and isolated headphone listening, live music remains humanity's sacred ritual of collective energy. When 50,000 strangers raise their hands together under lasers, time slows down and memories are forged forever.
+            </p>
+            <div style="padding-top:1.25rem;border-top:1px solid var(--border-subtle);display:flex;align-items:center;gap:1.5rem;">
+              <div>
+                <div style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--accent-primary);">100%</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;">Demo Reservation Preview</div>
+              </div>
+              <div style="width:1px;height:40px;background:var(--border-subtle);"></div>
+              <div>
+                <div style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--text-primary);">0</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;">Hidden Surcharges</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Core Values (Ref 1, 4, 14) -->
+        <div class="about-values-grid">
+          
+          <div class="value-card">
+            <div class="value-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3 class="value-card-title">CURATED ACOUSTIC EXCELLENCE</h3>
+            <p class="value-card-desc">
+              Every concert and festival on FESTORA is vetted for spatial sound design, cutting-edge lighting architecture, and authentic artist lineups.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="value-card-title">GUARANTEED PASS INTEGRITY</h3>
+            <p class="value-card-desc">
+              This prototype does not issue admission tickets, validate QR codes, process payments, or provide wristband exchange. Demo reservation records are stored only in this browser.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="value-card-title">FLEXIBLE CANCELLATION</h3>
+            <p class="value-card-desc">
+              Plans change, life happens. Attendees can cancel any registered pass directly through the My Bookings dashboard with a single tap up to 48 hours prior.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact & Inquiries Module -->
+    <section class="section section-secondary" id="contact" aria-label="Contact and Festival HQ">
+      <div class="container">
+        
+        <div class="section-header" style="justify-content:center;text-align:center;">
+          <div class="section-title-wrap">
+            <span class="section-tag" style="justify-content:center;">GET IN TOUCH</span>
+            <h2 class="section-title">CONNECT WITH FESTIVAL HQ</h2>
+            <p class="section-subtitle">Questions regarding your pass, press credentials, or artist submissions? Reach out to our team.</p>
+          </div>
+        </div>
+
+        <div class="contact-card-wrap">
+          <form id="contact-form" novalidate>
+            
+            <div class="form-grid-2col">
+              <div class="form-group" id="group-contact-name">
+                <label for="contact-name" class="form-label">Your Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Aryan Sharma" required>
+                <span class="form-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-group" id="group-contact-email">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="e.g. aryan@example.com" required>
+                <span class="form-error">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Inquiry Subject</label>
+              <select id="contact-subject" class="form-control">
+                <option value="Pass Reservation">Festival Pass Support</option>
+                <option value="Artist Booking">Artist & Lineup Inquiry</option>
+                <option value="Media & Press">Press & Media Accreditation</option>
+                <option value="Sponsorship">Brand & Stage Sponsorship</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="group-contact-msg">
+              <label for="contact-msg" class="form-label">Message *</label>
+              <textarea id="contact-msg" class="form-control" rows="4" placeholder="How can our festival coordinators assist you?" required></textarea>
+              <span class="form-error">Please enter your message.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-pill btn-block btn-lg glow-orange">
+              <span>SEND INQUIRY TO FESTIVAL HQ ↗</span>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Legal Anchors Section (Terms & Privacy) -->
+    <section class="section" id="terms" style="padding-top:4rem;border-top:1px solid var(--border-subtle);" aria-label="Legal & Policies">
+      <div class="container container-narrow">
+        <h2 style="font-size:1.6rem;margin-bottom:1.25rem;">FESTIVAL TERMS & TICKETING POLICIES</h2>
+        
+        <div style="display:flex;flex-direction:column;gap:1.5rem;font-size:0.92rem;color:var(--text-secondary);line-height:1.7;">
+          <div id="security">
+            <h3 style="font-size:1.15rem;color:var(--text-primary);margin-bottom:0.4rem;">1. DEMO RESERVATION NOTICE</h3>
+            <p>All passes generated through FESTORA carry unique alphanumeric identifiers. Digital passes must be presented at the venue box office alongside valid government identification for RFID wristband collection.</p>
+          </div>
+
+          <div id="privacy">
+            <h3 style="font-size:1.15rem;color:var(--text-primary);margin-bottom:0.4rem;">2. PRIVACY & DATA ETHICS</h3>
+            <p>FESTORA stores attendee booking records in client-side LocalStorage. We do not sell attendee demographic data to unverified third-party ad networks.</p>
+          </div>
+
+          <div>
+            <h3 style="font-size:1.15rem;color:var(--text-primary);margin-bottom:0.4rem;">3. CANCELLATION PROTOCOLS</h3>
+            <p>Registrations may be cancelled at no cost up to 48 hours prior to official gate opening directly via the attendee's My Bookings dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-main">
+      <div>
+        <a href="index.html" class="brand-logo">
+          <span class="logo-bars"><span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span></span>
+          <span>FESTORA<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-brand-desc">Feel the Music. Live the Moment. Event discovery and demo reservations.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="events.html" class="footer-link">Explore Events</a></li>
+          <li><a href="artists.html" class="footer-link">Artists</a></li>
+          <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link">About FESTORA</a></li>
+          <li><a href="about.html#contact" class="footer-link">Festival Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div><span>© 2026 FESTORA.</span></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/events.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Inline Contact Form Handler
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contact-form');
+      if (!contactForm) return;
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const msg = document.getElementById('contact-msg').value.trim();
+
+        let valid = true;
+        if (!name) {
+          document.getElementById('group-contact-name').classList.add('has-error');
+          valid = false;
+        } else {
+          document.getElementById('group-contact-name').classList.remove('has-error');
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          document.getElementById('group-contact-email').classList.add('has-error');
+          valid = false;
+        } else {
+          document.getElementById('group-contact-email').classList.remove('has-error');
+        }
+
+        if (!msg) {
+          document.getElementById('group-contact-msg').classList.add('has-error');
+          valid = false;
+        } else {
+          document.getElementById('group-contact-msg').classList.remove('has-error');
+        }
+
+        if (valid) {
+          if (window.FestoraUI && window.FestoraUI.showToast) {
+            window.FestoraUI.showToast(`Thank you, ${name}! This demo form does not send messages yet. Your message has not been sent.`);
+          }
+          // Keep the user's message in the form because no delivery service is connected.
+        }
+      });
+    });
+  </script>
+</body>
+</html>
